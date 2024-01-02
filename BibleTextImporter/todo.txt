@@ -1,0 +1,8 @@
+split classes
+write tests
+simple blazor
+
+- free form b c:v
+- free form b c - displays whole chapter
+- free form b c:v1-v2
+- get book list dropdown
