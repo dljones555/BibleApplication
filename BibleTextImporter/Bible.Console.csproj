@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <None Update="eng-kjv_vpl.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

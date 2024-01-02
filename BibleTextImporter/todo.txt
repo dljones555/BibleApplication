@@ -2,6 +2,10 @@ split classes
 write tests
 simple blazor
 
+I am doing this to keep my tech and logic mind going and exercise skills.
+Need to get out of debt and earn.
+May do what I know.
+
 - free form b c:v
 - free form b c - displays whole chapter
 - free form b c:v1-v2

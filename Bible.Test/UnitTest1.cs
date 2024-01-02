@@ -5,21 +5,31 @@ namespace Bible.Test
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void Load_KingJamesVesion_BooksCount_Returns_66()
         {
-            const int bibleCanonBookCount = 66;
+            const int expectedBibleCanonBookCount = 66;
 
-            var version = "kjv";
-            var filename = "eng-kjv_vpl.txt";
+            var bible = BibleTestHelper.CreateDefaultKingJamesBible();
 
-            using var sr = new StreamReader(filename);
-            var fileContents = sr.ReadToEnd();
+            int actualBibleCanonBookCount = bible.Books.Count;
 
-            var btp = new KjvBibleTextParser(version, fileContents);
-            var bible = btp.Parse();
-
-            Assert.Equal(bibleCanonBookCount,bible.Books.Count);
-
+            Assert.Equal(expectedBibleCanonBookCount, actualBibleCanonBookCount);
         }
+
+        [Fact]
+        public void Load_KingJamesVesion_ChaptersCount_Returns_1189()
+        {
+            const int expectedChaptersTotalCount = 1189;
+
+            var bible = BibleTestHelper.CreateDefaultKingJamesBible();
+
+            int actualChaptersTotalCount = bible.Books.Sum(b => b.Chapters.Count);
+
+            Assert.Equal(expectedChaptersTotalCount, actualChaptersTotalCount);
+        }
+
+        // verify verses. gen 1:1, john 3:16, rev 22:21 verse text
+
+        // verify 3 types of strategies
     }
 }

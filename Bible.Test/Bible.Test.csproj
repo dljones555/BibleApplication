@@ -26,4 +26,10 @@
     <ProjectReference Include="..\Bible.Domain\Bible.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Resources\eng-kjv_vpl.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
