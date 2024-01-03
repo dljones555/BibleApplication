@@ -41,14 +41,14 @@ try
         Console.Write("Search the Bible: ");
         searchTerm = Console.ReadLine();
 
-        if (searchTerm == "END")
-            break;
-
         if (String.IsNullOrWhiteSpace(searchTerm))
         {
             Console.WriteLine("Enter a bible verse or search keyword(s).");
             continue;
         }
+
+        if (searchTerm.ToUpperInvariant().Equals("END"))
+            break;
 
         var searchStrategy = bible.DetermineSearchStrategy(searchTerm);
 

@@ -17,7 +17,7 @@
 
         public Chapter GetChapter(int chapter)
         {
-            return this.Chapters.Where(c => c.Number == chapter).First();
+            return this.Chapters.Where(c => c.Number == chapter).Single();
         }
     }
 }

@@ -38,6 +38,8 @@ namespace Bible.Test
 
             var strategy = bible.DetermineSearchStrategy(verseNotation);
 
+            Assert.IsType<VerseSearchStrategy>(strategy);
+
             var actualVerse = strategy.Search(verseNotation);
 
             Assert.Single(actualVerse);
@@ -55,14 +57,32 @@ namespace Bible.Test
 
             var strategy = bible.DetermineSearchStrategy(chapter);
 
+            Assert.IsType<ChapterSearchStrategy>(strategy);
+
             var verses = strategy.Search(chapter);
 
             Assert.Equal(expectedVerseCount, verses.Count());
         }
 
+        [Fact]
+
+        public void Search_Bible_By_SearchStrategy_Returns_Expected_Verse_Count()
+        {
+            var bible = BibleTestHelper.CreateDefaultKingJamesBible();
+
+            const string keyword = "Laodicea";
+            const int expectedVerseCount = 6;
+
+            var strategy = bible.DetermineSearchStrategy(keyword);
+
+            Assert.IsType<KeywordSearchStrategy>(strategy);
+
+            var verses = strategy.Search(keyword);
+
+            Assert.Equal(expectedVerseCount, verses.Count());
+        }
         // Write search test
 
         // Write negative tests / errors
-
     }
 }

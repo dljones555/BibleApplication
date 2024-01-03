@@ -27,7 +27,7 @@
 
         public string Validate(string searchTerm)
         {
-            throw new NotImplementedException();
+            return string.Empty;
         }
     }
 }

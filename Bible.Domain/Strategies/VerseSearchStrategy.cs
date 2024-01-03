@@ -16,12 +16,15 @@ namespace Bible.Domain
 
         public string Validate(string searchTerm)
         {
+            ArgumentException.ThrowIfNullOrEmpty(searchTerm);
+
             string error = string.Empty;
 
             var verseParts = _bible.GetVerseParts(searchTerm);
             var book = _bible.GetBook(verseParts.book);
 
-            // TODO: consider .NET 8 pattern matching
+            // TODO: consider .NET 8 pattern matching or mini validator or validation attribute
+            // (which i've used before)
 
             if (book is null)
             {
