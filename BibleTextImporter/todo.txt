@@ -6,7 +6,12 @@ I am doing this to keep my tech and logic mind going and exercise skills.
 Need to get out of debt and earn.
 May do what I know.
 
+tests
+re
+
 - free form b c:v
 - free form b c - displays whole chapter
 - free form b c:v1-v2
+- free form b c1-c2
+- next prev
 - get book list dropdown

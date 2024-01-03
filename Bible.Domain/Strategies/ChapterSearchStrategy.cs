@@ -10,6 +10,7 @@
         public IEnumerable<BibleTextLine> Search(string searchTerm)
         {
             var verses = new List<BibleTextLine>();
+
             var chapterParts = _bible.GetChapterParts(searchTerm);
 
             var book = _bible.GetBook(chapterParts.book);

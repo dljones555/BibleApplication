@@ -14,7 +14,7 @@
         {
             var apocrypha = "TOB JDT ESG WIS SIR BAR PRA SUS BEL 1MA 2MA 1ES PRM 4ES";
 
-            List<Book> books = new List<Book>();
+            var books = new List<Book>();
             var lines = _text.Split('\n');
             Book? currentBook = default;
             Chapter? currentChapter = default;
@@ -58,6 +58,7 @@
             return new Bible(_version, books);
         }
 
+        // TODO: regex and match group this
         public BibleTextLine ParseLine(string line)
         {
             // GEN 1:1 In the beginning...

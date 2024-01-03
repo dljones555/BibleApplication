@@ -21,10 +21,14 @@ namespace Bible.Domain
             var verseParts = _bible.GetVerseParts(searchTerm);
             var book = _bible.GetBook(verseParts.book);
 
+            // TODO: consider .NET 8 pattern matching
+
             if (book is null)
             {
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("Invalid book abbreviation.");
+               
+                // TODO: Make this a helper method
                 foreach (var b in _bible.Books)
                 {
                     sb.Append(b.Title + " ");

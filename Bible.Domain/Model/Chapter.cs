@@ -13,13 +13,13 @@
             Book = book;
         }
 
-        public bool IsValidVerse(int verse)
+        public bool IsValidVerse(int number)
         {
-            return verse > this.Verses.Count;
+            return number > this.Verses.Count;
         }
-        public Verse GetVerse(int verse)
+        public Verse GetVerse(int number)
         {
-            return Verses[verse];
+            return Verses.Where(v => v.Number == number).Single();
         }
     }
 }
