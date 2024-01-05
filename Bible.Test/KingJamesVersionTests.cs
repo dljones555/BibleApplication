@@ -1,4 +1,5 @@
 using Bible.Domain;
+using System.Text.RegularExpressions;
 
 namespace Bible.Test
 {
@@ -65,13 +66,13 @@ namespace Bible.Test
         }
 
         [Fact]
-
         public void Search_Bible_By_SearchStrategy_Returns_Expected_Verse_Count()
         {
+
             var bible = BibleTestHelper.CreateDefaultKingJamesBible();
 
-            const string keyword = "Laodicea";
-            const int expectedVerseCount = 6;
+            const string keyword = "grace";
+            const int expectedVerseCount = 159;
 
             var strategy = bible.DetermineSearchStrategy(keyword);
 
@@ -81,8 +82,6 @@ namespace Bible.Test
 
             Assert.Equal(expectedVerseCount, verses.Count());
         }
-        // Write search test
-
         // Write negative tests / errors
     }
 }

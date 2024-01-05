@@ -1,6 +1,18 @@
-split classes
-write tests
-simple blazor
+What can I do that is hard, push myself
+more .net 8 / C# newer version features
+- readonlycollection
+- optimize access modifiers
+
+This program is pretty simple.
+Making it semi clean code
+
+switch
+Simple Blazor
+Chapter paging
+This chapter
+
+Contanizer
+
 
 I am doing this to keep my tech and logic mind going and exercise skills.
 Need to get out of debt and earn.
