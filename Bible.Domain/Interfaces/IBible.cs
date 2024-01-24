@@ -10,5 +10,6 @@
         (string book, int chapter, int verse) GetVerseParts(string verseInput);
         bool IsValidChapterFormat(string verseInput);
         bool IsValidVerseFormat(string verseInput);
+        bool IsValidRangeFormat(string verseInput);
     }
 }

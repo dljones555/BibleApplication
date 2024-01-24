@@ -9,12 +9,14 @@ namespace Bible.Domain
         public List<Book> Books { get; set; }
         private Regex _verseFormatRegex { get; set; }
         private Regex _chapterFormatRegex { get; set; }
+        private Regex _rangeFormatRegex { get; set; }
         public Bible(string version, List<Book> books)
         {
             Version = version;
             Books = books;
 
             _verseFormatRegex = new(@"^([a-zA-Z]{3})\s(\d+):(\d+)$");
+            _rangeFormatRegex = new(@"^([a-zA-Z]{3})\s(\d+):(\d+)-(\d+)$");
             _chapterFormatRegex = new(@"^([a-zA-Z]{3})\s(\d+)$");
         }
 
@@ -53,6 +55,11 @@ namespace Bible.Domain
         public bool IsValidChapterFormat(string verseInput)
         {
             return _chapterFormatRegex.IsMatch(verseInput);
+        }
+
+        public bool IsValidRangeFormat(string verseInput)
+        {
+            return _rangeFormatRegex.IsMatch(verseInput);
         }
 
         public (string book, int chapter) GetChapterParts(string verseInput)

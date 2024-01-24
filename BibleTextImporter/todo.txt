@@ -11,7 +11,7 @@ Simple Blazor
 Chapter paging
 This chapter
 
-Contanizer
+Containerize
 
 
 I am doing this to keep my tech and logic mind going and exercise skills.

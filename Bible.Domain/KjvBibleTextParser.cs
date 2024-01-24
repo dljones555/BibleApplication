@@ -48,7 +48,7 @@
                 currentChapter = currentBook.Chapters.Last();
 
                 var verseText = verse.VerseText;
-                // Replace Unicode paragraph characer with newilne
+                // Replace Unicode paragraph character with newilne
                 verseText = verseText.Replace("\u00b6", "\n");
                 verseText = verseText.Trim();
                 currentChapter.Verses.Add(new Verse(verse.Chapter, verse.Verse, verseText));

@@ -83,5 +83,21 @@ namespace Bible.Test
             Assert.Equal(expectedVerseCount, verses.Count());
         }
         // Write negative tests / errors
+
+        [Fact]
+        public void Bible_Verse_Range_Format_IsValid()
+        {
+            var bible = BibleTestHelper.CreateDefaultKingJamesBible();
+
+            // JOH 3:16 - 4:16
+            // JOH 3:15-20
+            // JOH 4-5
+            // all w/ space variations
+
+            var isValidRange = bible.IsValidRangeFormat("JON 3:16-17");
+
+            Assert.True(isValidRange);
+
+        }
     }
 }

@@ -63,6 +63,7 @@ namespace Bible.Domain
             var verses = new List<BibleTextLine>();
             var verseParts = _bible.GetVerseParts(searchTerm);
 
+            // Use LINQ
             var book = _bible.GetBook(verseParts.book);
 
             var chapter = book.GetChapter(verseParts.chapter);
